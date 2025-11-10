@@ -21,7 +21,8 @@ jobs:
           run: pip install -r requirments.txt
 
         - name: run test cases
-          run: pytest --cov=calc --cov-report=term
+          run: |
+            pytest --cov=calc --cov-report=term 
   
   deploy-job:
     runs-on: ubuntu-latest
@@ -29,6 +30,6 @@ jobs:
     steps:
       - name: print message
         run: echo 'deploy job started...'
-        
+
       
 
